@@ -1,0 +1,39 @@
+{
+  "name": "flincap-sdk",
+  "version": "0.0.1",
+  "description": "The official Flincap SDK for Javascript/Typescript",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup ./src/index.ts --format cjs,esm --dts",
+    "lint": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flincap/flincap-sdk.git"
+  },
+  "keywords": [
+    "sdk",
+    "flincap",
+    "typescript",
+    "javascript",
+    "exchange",
+    "crypto"
+  ],
+  "author": "Spiff Jekey-Green",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flincap/flincap-sdk/issues"
+  },
+  "homepage": "https://github.com/flincap/flincap-sdk#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
