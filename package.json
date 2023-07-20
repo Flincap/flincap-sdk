@@ -1,6 +1,6 @@
 {
   "name": "flincap-sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The official Flincap SDK for Javascript/Typescript",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
