@@ -1,11 +1,11 @@
 # Flincap SDK
 
-[![npm shield](https://img.shields.io/npm/v/@ravenapp/raven)](https://www.npmjs.com/package/@ravenapp/raven)
+[![npm shield](https://img.shields.io/npm/v/flincap-sdk)](https://www.npmjs.com/package/flincap-sdk)
 
 The Flincap library provides access to the Flincap API from JavaScript/TypeScript.
 
 ## Installation
-To install run
+To install see the lines below.
 
 ```sh
 # using npm
@@ -17,10 +17,11 @@ yarn add flincap-sdk
 
 ## Usage
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/raven-typescript-example-yrzyda?file=app.ts&view=editor)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/Flincap/flincap-sdk/tree/main/examples/backend)
+<!-- [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/raven-typescript-example-yrzyda?file=app.ts&view=editor) -->
 
 ```js
-const baseURL = 'https://flincap.app';
+const baseURL = 'https://flincap.app/api';
 const authToken = 'YOUR_AUTH_TOKEN'; // Optional, only if the API requires authentication
 
 const apiClient = new FlincapApiClient(baseURL, authToken);
