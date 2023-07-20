@@ -32,3 +32,10 @@ jobs:
           publish:  pnpm run build
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          
+      - name: Publish to npm
+        run: |
+          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+          npm publish --ignore-scripts --access public
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
