@@ -87,6 +87,28 @@ export class FlincapApiClient {
     }
   }
 
+  // New method to fetch supported coins
+  public async getSupportedCoins(): Promise<FlincapApiResponse<any>> {
+    try {
+      const response: AxiosResponse<FlincapApiResponse<any>> = await this.axiosInstance.get('/v1/supported-coins');
+
+      return response.data;
+    } catch (error) {
+      throw this.handleRequestError(error);
+    }
+  }
+
+  // New method to create deposit address
+  public async createDepositAddress(selectedCrypt: string): Promise<FlincapApiResponse<any>> {
+    try {
+      const response: AxiosResponse<FlincapApiResponse<any>> = await this.axiosInstance.post('/v1/create-deposit-address', { selectedCrypt });
+
+      return response.data;
+    } catch (error) {
+      throw this.handleRequestError(error);
+    }
+  }
+
   private handleRequestError(error: any): FlincapError {
     if (error.response && error.response.data) {
       return {
