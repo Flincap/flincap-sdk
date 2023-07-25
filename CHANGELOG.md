@@ -1,5 +1,11 @@
 # flincap-sdk
 
+## 0.0.4
+
+### Patch Changes
+
+- bae2847: Used pnpm build command in github action
+
 ## 0.0.3
 
 ### Patch Changes
