@@ -11,3 +11,7 @@ apiClient.getRate('USDT', 'NGN').then((response) => {
 }).catch((error) => {
   console.error(error.message, error.code);
 });
+
+apiClient.getSupportedCoins().then(response => {
+  console.log(response);
+}).catch(err => console.error(err));

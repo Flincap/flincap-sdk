@@ -1,0 +1,246 @@
+{
+	"info": {
+		"_postman_id": "238791cc-18c5-4082-816a-30ccfd0c8c66",
+		"name": "Flincap API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25720052"
+	},
+	"item": [
+		{
+			"name": "Get Rate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{apiKey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/get-rate?selectedCrypt=USDT&selectedFiat=NGN",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"get-rate"
+					],
+					"query": [
+						{
+							"key": "selectedCrypt",
+							"value": "USDT"
+						},
+						{
+							"key": "selectedFiat",
+							"value": "NGN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Exchange",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{apiKey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/get-exchange",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"get-exchange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Record Transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{apiKey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"selectedCrypt\": \"USDT\",\n    \"selectedFiat\": \"NGN\",\n    \"email\": \"string\",\n    \"bankName\": \"string\",\n    \"bankCode\": \"string\",\n    \"accNum\": \"string\",\n    \"accName\": \"string\",\n    \"amountFiat\": \"string\",\n    \"amountCrypt\": \"string\",\n    \"rate\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/create-transaction",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"create-transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transaction",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{apiKey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/get-transactions/{transaction_id}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"get-transactions",
+						"{transaction_id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get History",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{apiKey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/get-transactions?transactionType=DEPOSIT&selectedFiat=CRYPTO",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"get-transactions"
+					],
+					"query": [
+						{
+							"key": "transactionType",
+							"value": "DEPOSIT"
+						},
+						{
+							"key": "selectedFiat",
+							"value": "CRYPTO"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Supported Coins",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{apiKey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/v1/supported-coins",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"supported-coins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Deposit Address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{apiKey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"selectedCrypt\": \"USDT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/v1/create-deposit-address",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"v1",
+						"create-deposit-address"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
