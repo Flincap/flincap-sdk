@@ -1,6 +1,6 @@
 name: CI
 on:
-  pull_request:
+  push:
     branches:
       - "main"
 
@@ -13,6 +13,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: 
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
